@@ -1,11 +1,11 @@
 def union(s1, s2):
-    return [x for x in s1] + [y for y in s2 if not y in s1]
+    return s1 + [y for y in s2 if not y in s1]
 
 def intersection(s1, s2):
     return [x for x in s1 if x in s2]
 
 def set_difference(s1, s2):
-    return [x for x in s1 if not x in intersection(s1, s2)]
+    return [x for x in s1 if not x in s2]
 
 def symmetric_difference(s1, s2):
     return set_difference(s1, s2) + set_difference(s2, s1)
